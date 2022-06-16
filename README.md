@@ -8,7 +8,7 @@ Image compression by K-means clustering
 
 ## Acknowledgement
 
-Big thanks to `Applied Mathematics and Statistics course` of `the Faculty of Information Technology, University of Natural Sciences, National University of Ho Chi Minh City`, for creating conditions and motivation for me to carry out this project.
+Big thanks to `Applied Mathematics and Statistics course` of the **Faculty of Information Technology, University of Natural Sciences, National University of Ho Chi Minh City**, for creating conditions and motivation for me to carry out this project.
 
 ## References
 
