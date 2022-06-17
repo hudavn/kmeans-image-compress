@@ -6,6 +6,7 @@ def kmeans(X, k):
     labels = []
 
     print("\n--- [INFO] Processing...")
+    
     while True:
         _X = X * np.ones((k,1,1))
         _centers = centers.reshape(centers.shape[0], 1, centers.shape[1])

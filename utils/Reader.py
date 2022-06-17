@@ -11,8 +11,8 @@ def GetData():
 
     k = int(input("Compress to (number of colors): "))
     
-    imageType = input("Image type (png, jpg, jpeg): ")
-    if imageType not in ["png", "jpg", "jpeg"]:
+    imageType = input("Image type (png, jpg, jpeg, pdf): ")
+    if imageType not in ["png", "jpg", "jpeg", "pdf"]:
         print("--- [ERROR] Image type is invalid")
         exit()
 
