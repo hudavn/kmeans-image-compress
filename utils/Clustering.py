@@ -5,7 +5,7 @@ def kmeans(X, k):
     centers = X[np.random.choice(X.shape[0], k, replace = False)]
     labels = []
 
-    print("\n--- [INFO] Processing...")
+    print("--- [INFO] Processing...")
     
     while True:
         _X = X * np.ones((k,1,1))
@@ -21,7 +21,8 @@ def kmeans(X, k):
         new_centers = np.zeros((k, X.shape[1]))
 
         for i in range(k):
-            new_centers[i] = np.mean(X[labels == i], axis=0)
+            if len(X[labels == i]):  # Case control: mean doesn't have any points in its cluster
+                new_centers[i] = np.mean(X[labels == i], axis=0)
 
         if (set([tuple(a) for a in centers]) == set([tuple(a) for a in new_centers])):
             break
