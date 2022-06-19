@@ -15,7 +15,8 @@ def GetData():
     if imageType not in ["png", "jpg", "jpeg", "pdf"]:
         print("--- [ERROR] Image type is invalid")
         exit()
-
+    
+    print()
     return filePath, k, imageType
 
 
@@ -25,4 +26,8 @@ def parseFileName(path): return ''.join(path.split('/')[-1].split('.')[:-1])
 def ReadImage(file):
     im = Image.open(file)
     width, height = im.size
-    return np.array(im.getdata()), width, height
+    rawData = list(im.getdata())
+
+    print(f"--- [INFO] {file.split('/')[-1]} - {len(rawData)} pixels - {len(set(rawData))} colors")
+
+    return np.array(rawData), width, height
